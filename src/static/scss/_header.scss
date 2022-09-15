@@ -1,0 +1,28 @@
+.avatar {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.app-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  display: flex;
+  .header-menu-item {
+    color: #5dcccd;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
