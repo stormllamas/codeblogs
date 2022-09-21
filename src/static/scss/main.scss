@@ -9,30 +9,24 @@ header {
   box-shadow: 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
-.code-content {
-  // padding: 20px;
-  background-color: #282c34;
-  border-radius: 10px;
-  font-weight: 600;
-  // color: white;
-  // white-space: pre-line;
+.cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
 
-  .blue {
-    color: #2693f2;
-  }
-
-  .pink {
-    color: #ce4c6d;
-  }
-
-  .yellow {
-    color: #d7ba7d;
-  }
-
-  .blue {
-    color: #2693f2;
+  p {
+    font-family: "Quicksand-bold", "Quicksand";
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(82, 82, 82);
   }
 }
 
