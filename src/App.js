@@ -2,8 +2,8 @@ import "./static/scss/main.scss";
 
 import { Provider } from "react-redux";
 import Home from "./components/Home";
-import UseRefSample from "./components/_CodeSamples/UseRefSample";
-import UseStateSample from "./components/_CodeSamples/UseStateSample";
+import UseRefValuePersist from "./components/_CodeSamples/UseRefValuePersist";
+import UseStateAndUseEffect from "./components/_CodeSamples/UseStateAndUseEffect";
 import store from "./store";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -16,12 +16,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<PublicRoute component={Home} />} />
           <Route
-            path="/UseRefSample"
-            element={<PublicRoute component={UseRefSample} />}
+            path="/UseRefValuePersist"
+            element={<PublicRoute component={UseRefValuePersist} />}
           />
           <Route
-            path="/UseStateSample"
-            element={<PublicRoute component={UseStateSample} />}
+            path="/UseStateAndUseEffect"
+            element={<PublicRoute component={UseStateAndUseEffect} />}
           />
         </Routes>
 

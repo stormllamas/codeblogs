@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const UseStateSample = () => {
+const UseStateAndUseEffect = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const UseStateSample = () => {
   );
 };
 
-export default UseStateSample;
+export default UseStateAndUseEffect;
