@@ -2,6 +2,7 @@ import "./static/scss/main.scss";
 
 import { Provider } from "react-redux";
 import Home from "./components/Home";
+import UseRefNoRerender from "./components/_CodeSamples/UseRefNoRerender";
 import UseRefValuePersist from "./components/_CodeSamples/UseRefValuePersist";
 import UseStateAndUseEffect from "./components/_CodeSamples/UseStateAndUseEffect";
 import store from "./store";
@@ -18,6 +19,10 @@ const App = () => {
           <Route
             path="/UseRefValuePersist"
             element={<PublicRoute component={UseRefValuePersist} />}
+          />
+          <Route
+            path="/UseRefNoRerender"
+            element={<PublicRoute component={UseRefNoRerender} />}
           />
           <Route
             path="/UseStateAndUseEffect"

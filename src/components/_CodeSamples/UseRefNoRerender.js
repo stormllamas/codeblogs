@@ -1,29 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
-const UseRefValuePersistSample = () => {
+const UseRefNoRerender = () => {
   const valueRef = useRef(false);
-  const [value, setValue] = useState(false);
 
-  const log = () => {
-    console.log("-----log-----");
-    console.log("value", value);
-    console.log("valueRef", valueRef.current);
+  const handleClick = () => {
+    const newValue = valueRef.current + 1;
+    console.log("newValue", newValue);
+    valueRef.current = newValue;
   };
 
   useEffect(() => {
-    console.log("-----RENDER-----");
-    console.log("value", value);
     console.log("valueRef", valueRef.current);
-    setValue(true);
-    valueRef.current = true;
-    log();
-  }, []);
+  }, [valueRef.current]);
 
   return (
     <div id="useRef-section" className="cover">
-      <p>Welcome to the UseRefValuePersistSample!</p>
+      <p>Welcome to the UseRefNoRerender!</p>
+      <button onClick={handleClick}>Clicker</button>
     </div>
   );
 };
 
-export default UseRefValuePersistSample;
+export default UseRefNoRerender;
