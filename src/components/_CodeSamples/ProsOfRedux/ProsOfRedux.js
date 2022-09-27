@@ -3,19 +3,25 @@ import { connect, Provider } from "react-redux";
 import { decrement, increment } from "./actions/counterActions";
 import store from "./store";
 
-const mapStateToProps = (state) => ({
+const mapStateToPropsForHello = (state) => ({
+  hello: state.hello,
+});
+
+const mapStateToPropsForCounter = (state) => ({
   counter: state.counter,
 });
 
-const SayHello = connect(mapStateToProps)(({ counter: { hello } }) => {
+const SayHello = connect(mapStateToPropsForHello)(({ hello: { text } }) => {
   console.log("[SayHello] is running");
-  return <h1>{hello}</h1>;
+  return <h1>{text}</h1>;
 });
 
-const ShowResult = connect(mapStateToProps)(({ counter: { count } }) => {
-  console.log("[ShowResult] is running");
-  return <h1>{count}</h1>;
-});
+const ShowResult = connect(mapStateToPropsForCounter)(
+  ({ counter: { count } }) => {
+    console.log("[ShowResult] is running");
+    return <h1>{count}</h1>;
+  }
+);
 
 const IncrementCounter = connect(null, { increment })(({ increment }) => {
   console.log("[IncrementCounter] is running");
@@ -27,7 +33,7 @@ const DecrementCounter = connect(null, { decrement })(({ decrement }) => {
   return <button onClick={decrement}> Decrement</button>;
 });
 
-const ConsOfContext = () => (
+const App = () => (
   <Provider store={store}>
     <SayHello />
     <ShowResult />
@@ -36,4 +42,4 @@ const ConsOfContext = () => (
   </Provider>
 );
 
-export default ConsOfContext;
+export default App;

@@ -45,7 +45,7 @@ const ShowResult = () => {
   return <h1>{count}</h1>;
 };
 
-const ConsOfContext = () => (
+const App = () => (
   <CounterProvider>
     <SayHello />
     <ShowResult />
@@ -54,4 +54,4 @@ const ConsOfContext = () => (
   </CounterProvider>
 );
 
-export default ConsOfContext;
+export default App;

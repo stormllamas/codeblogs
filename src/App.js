@@ -5,6 +5,7 @@ import React from "react";
 import Home from "./components/Home";
 import ConsOfContext from "./components/_CodeSamples/ConstOfContext.js/ConsOfContext";
 import ProsOfRedux from "./components/_CodeSamples/ProsOfRedux/ProsOfRedux";
+import ProsOfZustand from "./components/_CodeSamples/ProsOfZustand/ProsOfZustand";
 import UseRefNoRerender from "./components/_CodeSamples/UseRefNoRerender";
 import UseRefValuePersist from "./components/_CodeSamples/UseRefValuePersist";
 import UseStateAndUseEffect from "./components/_CodeSamples/UseStateAndUseEffect";
@@ -36,6 +37,10 @@ const App = () => {
         <Route
           path="/ProsOfRedux"
           element={<PublicRoute component={ProsOfRedux} />}
+        />
+        <Route
+          path="/ProsOfZustand"
+          element={<PublicRoute component={ProsOfZustand} />}
         />
       </Routes>
 
